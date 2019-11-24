@@ -32,8 +32,9 @@ header.mast {
     border: 2px solid white;
 }
 
-.no-left-pad {
+.no-pad {
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 .project-img {
