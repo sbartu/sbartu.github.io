@@ -6,7 +6,7 @@
 .carousel-img {
     width: 100%;
     height: auto;
-  }
+}
 
 header.mast {
     padding-top: 10rem;
@@ -16,4 +16,61 @@ header.mast {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-  }
+}
+
+.img-round {
+    margin: 1px 10px;
+    border-radius: 50px;
+    width: 75px;
+    height: 85px;
+    border: 2px solid orangered;
+}
+
+.project {
+    margin: 1px 10px;
+    border-radius: 45px;
+    border: 2px solid white;
+}
+
+.no-left-pad {
+  padding-left: 0px;
+}
+
+.project-img {
+  border-radius: 45px;
+}
+
+.project-description {
+  padding-top: 15px;
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: orangered;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 60px;
+  color: orangered;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: black;
+}
+
+.carousel-indicators .active {
+  background-color: orangered;
+}
