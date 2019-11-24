@@ -55,68 +55,70 @@
       </div>
 
       <!-- Normal Word Search Results-->
-      <div class="row disp">
-        <div class="card my-11">
-          <h5 class="card-header">Word Dissected</h5>
-          <div class="card-body">
-            <div id="carouselIndicatorsW" class="carousel slide" data-interval="false">
-              <ol class="carousel-indicators">
-                <li v-if="words_display.length === 0 || words_not_found" data-target="#carouselIndicatorsW"
-                  data-slide-to="0" class="active"></li>
-                <li v-else v-for="(item, index) in words_display" :class="{ 'active': index === 0 }"
-                  data-target="#carouselIndicatorsW" v-bind:data-slide-to="index"></li>
-              </ol>
+      <div class="container">
+        <div class="row disp">
+          <div class="card my-11">
+            <h5 class="card-header">Word Dissected</h5>
+            <div class="card-body">
+              <div id="carouselIndicatorsW" class="carousel slide" data-interval="false">
+                <ol class="carousel-indicators">
+                  <li v-if="words_display.length === 0 || words_not_found" data-target="#carouselIndicatorsW"
+                    data-slide-to="0" class="active"></li>
+                  <li v-else v-for="(item, index) in words_display" :class="{ 'active': index === 0 }"
+                    data-target="#carouselIndicatorsW" v-bind:data-slide-to="index"></li>
+                </ol>
 
-              <div class="carousel-inner">
-                <div class="row result">
-                  <div v-if="words_not_found" class="carousel-item active">
-                    <div class="carousel-caption d-none d-md-block">
-                      <p>No results were found for the query "[[ given_query ]]".</p>
-                    </div>
-                  </div>
-
-                  <div v-else-if="start" class="carousel-item active">
-                    <div class="carousel-caption d-none d-md-block">
-                      <p>Word definition, synonyms, antonyms and example sentences will be displayed here.</p>
-                    </div>
-                  </div>
-
-                  <div v-else v-for="(item, index) in words_display" class="carousel-item"
-                    :class="{ 'active': index === 0}">
-                    <div class="carousel-caption d-none d-md-block">
-                      <div class="bullets">
-                        <ul>
-                          <li><b>Definition: </b>[[ item.definition ]]</li>
-                          <li><b>Part of Speech: </b>[[ item.partOfSpeech ]]</li>
-                          <li><b>Synonyms:</b></li>
-                          <ul>
-                            <li v-for="syn in item.synonyms">[[ syn ]]</li>
-                          </ul>
-                          <li><b>Antonyms:</b></li>
-                          <ul>
-                            <li v-for="ant in item.antonyms">[[ ant ]]</li>
-                          </ul>
-                          <li><b>Examples:</b></li>
-                          <ul>
-                            <li v-for="exp in item.examples">[[ exp ]]</li>
-                          </ul>
-                        </ul>
+                <div class="carousel-inner">
+                  <div class="row result">
+                    <div v-if="words_not_found" class="carousel-item active">
+                      <div class="carousel-caption d-md-block">
+                        <p>No results were found for the query "[[ given_query ]]".</p>
                       </div>
                     </div>
+
+                    <div v-else-if="start" class="carousel-item active">
+                      <div class="carousel-caption d-md-block">
+                        <p>Word definition, synonyms, antonyms and example sentences will be displayed here.</p>
+                      </div>
+                    </div>
+
+                    <div v-else v-for="(item, index) in words_display" class="carousel-item"
+                      :class="{ 'active': index === 0}">
+                      <div class="carousel-caption d-md-block">
+                        <div class="bullets">
+                          <ul>
+                            <li><b>Definition: </b>[[ item.definition ]]</li>
+                            <li><b>Part of Speech: </b>[[ item.partOfSpeech ]]</li>
+                            <li><b>Synonyms:</b></li>
+                            <ul>
+                              <li v-for="syn in item.synonyms">[[ syn ]]</li>
+                            </ul>
+                            <li><b>Antonyms:</b></li>
+                            <ul>
+                              <li v-for="ant in item.antonyms">[[ ant ]]</li>
+                            </ul>
+                            <li><b>Examples:</b></li>
+                            <ul>
+                              <li v-for="exp in item.examples">[[ exp ]]</li>
+                            </ul>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
-
                 </div>
+
+                <a class="carousel-control-prev" href="#carouselIndicatorsW" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#carouselIndicatorsW" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
-
-              <a class="carousel-control-prev" href="#carouselIndicatorsW" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-
-              <a class="carousel-control-next" href="#carouselIndicatorsW" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
           </div>
         </div>
@@ -138,20 +140,20 @@
               <div class="carousel-inner">
                 <div class="row result">
                   <div v-if="urban_not_found" class="carousel-item active">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <p>No results were found for the query "[[ given_query ]]".</p>
                     </div>
                   </div>
 
                   <div v-else-if="start" class="carousel-item active">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <p>Slang definitions will be displayed here.</p>
                     </div>
                   </div>
 
                   <div v-else v-for="(item, index) in urban_display" class="carousel-item"
                     :class="{ 'active': index === 0}">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <p>[[ item.definition ]]</p>
                     </div>
                   </div>
