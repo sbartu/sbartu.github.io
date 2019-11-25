@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "494_Project 1 Zelda",
+"dataUrl": "P1_gold_webgl.data.unityweb",
+"wasmCodeUrl": "P1_gold_webgl.wasm.code.unityweb",
+"wasmFrameworkUrl": "P1_gold_webgl.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
