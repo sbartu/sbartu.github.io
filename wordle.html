@@ -82,8 +82,8 @@
                       </div>
                     </div>
 
-                    <div v-else v-for="(item, index) in words_display" class="carousel-item"
-                      :class="{ 'active': index === 0}">
+                    <div v-else v-for="(item, index) in words_display"
+                      :class="['carousel-item', (index === 0 ? 'active' : '')]">
                       <div class="carousel-caption d-md-block">
                         <div class="bullets">
                           <ul>
@@ -152,7 +152,7 @@
                   </div>
 
                   <div v-else v-for="(item, index) in urban_display" class="carousel-item"
-                    :class="{ 'active': index === 0}">
+                    :class="{ 'active': index === 0 }">
                     <div class="carousel-caption d-md-block">
                       <p>[[ item.definition ]]</p>
                     </div>

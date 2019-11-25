@@ -19,6 +19,8 @@ var resultView = new Vue({
       if(e.keyCode === 13) {
         this.start = false;
         this.given_query = e.target.value;
+        this.words_display = [];
+        this.urban_display = [];
         this.search_words(e);
         this.search_urban(e);
         this.search_rhymes(e);
