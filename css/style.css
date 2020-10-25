@@ -9,9 +9,9 @@
 }
 
 header.mast {
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 72px);
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/bg-masthead.jpg");
+    padding-top: 180px;
+    padding-bottom: 60px;
+    background-color: rgb(91, 111, 158, 0.5);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
